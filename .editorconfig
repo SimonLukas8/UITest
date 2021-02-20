@@ -1,0 +1,4 @@
+﻿[*.vb]
+
+# BC42104: Die Variable wurde verwendet, bevor ihr ein Wert zugewiesen wurde.
+dotnet_diagnostic.BC42104.severity = suggestion

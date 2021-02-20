@@ -45,16 +45,15 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnMedia = New System.Windows.Forms.Button()
         Me.panelLogo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnbla = New System.Windows.Forms.Button()
+        Me.PanelContent = New System.Windows.Forms.Panel()
+        Me.PictureBoxMap = New System.Windows.Forms.PictureBox()
         Me.panelSideMenu.SuspendLayout()
         Me.PanelToolsSubmenu.SuspendLayout()
         Me.PanelPlaylistSubMenu.SuspendLayout()
         Me.panelMediaSubmenu.SuspendLayout()
-        Me.panelLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelContent.SuspendLayout()
+        CType(Me.PictureBoxMap, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panelSideMenu
@@ -357,6 +356,7 @@ Partial Class Form1
         '
         'btnMedia
         '
+        Me.btnMedia.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMedia.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnMedia.FlatAppearance.BorderSize = 0
         Me.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -372,53 +372,51 @@ Partial Class Form1
         '
         'panelLogo
         '
-        Me.panelLogo.Controls.Add(Me.PictureBox1)
         Me.panelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelLogo.Location = New System.Drawing.Point(0, 0)
         Me.panelLogo.Name = "panelLogo"
         Me.panelLogo.Size = New System.Drawing.Size(229, 100)
         Me.panelLogo.TabIndex = 0
         '
-        'PictureBox1
+        'btnbla
         '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(19, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(183, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.btnbla.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnbla.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!)
+        Me.btnbla.Location = New System.Drawing.Point(245, 155)
+        Me.btnbla.Name = "btnbla"
+        Me.btnbla.Size = New System.Drawing.Size(32, 30)
+        Me.btnbla.TabIndex = 2
+        Me.btnbla.Text = "Bla"
+        Me.btnbla.UseVisualStyleBackColor = True
         '
-        'PictureBox2
+        'PanelContent
         '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(285, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(647, 553)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.PanelContent.Controls.Add(Me.btnbla)
+        Me.PanelContent.Controls.Add(Me.PictureBoxMap)
+        Me.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContent.Location = New System.Drawing.Point(285, 0)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(0)
+        Me.PanelContent.Name = "PanelContent"
+        Me.PanelContent.Size = New System.Drawing.Size(647, 553)
+        Me.PanelContent.TabIndex = 9
         '
-        'Button1
+        'PictureBoxMap
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!)
-        Me.Button1.Location = New System.Drawing.Point(410, 195)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(32, 30)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Bla"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PictureBoxMap.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBoxMap.Image = CType(resources.GetObject("PictureBoxMap.Image"), System.Drawing.Image)
+        Me.PictureBoxMap.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBoxMap.Name = "PictureBoxMap"
+        Me.PictureBoxMap.Size = New System.Drawing.Size(647, 553)
+        Me.PictureBoxMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxMap.TabIndex = 0
+        Me.PictureBoxMap.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(932, 553)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PanelContent)
         Me.Controls.Add(Me.panelSideMenu)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -430,9 +428,8 @@ Partial Class Form1
         Me.PanelToolsSubmenu.ResumeLayout(False)
         Me.PanelPlaylistSubMenu.ResumeLayout(False)
         Me.panelMediaSubmenu.ResumeLayout(False)
-        Me.panelLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelContent.ResumeLayout(False)
+        CType(Me.PictureBoxMap, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -487,8 +484,6 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-
     Private Sub btnMedia_Click(sender As Object, e As EventArgs) Handles btnMedia.Click
         If panelMediaSubmenu.Visible = False Then
             panelMediaSubmenu.Visible = True
@@ -505,6 +500,32 @@ Partial Class Form1
         End If
     End Sub
 
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button1 As Button
+    Private Sub Form1_ResizeBegin(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.ResizeBegin
+
+        btnbla.Visible = False
+
+    End Sub
+
+    Private Sub Form1_ResizeEnd(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.ResizeEnd
+
+        Dim x As Integer
+        Dim y As Integer
+        Dim z As Integer
+        Dim actualHeight As Integer
+
+
+
+        x = PictureBoxMap.ClientSize.Width
+        y = PictureBoxMap.ClientSize.Width * 467 / 987
+        btnbla.Visible = True
+        z = btnbla.Location.Y
+
+
+
+        MsgBox(x & " " & y & " " & z)
+
+    End Sub
+    Friend WithEvents btnbla As Button
+    Friend WithEvents PanelContent As Panel
+    Friend WithEvents PictureBoxMap As PictureBox
 End Class
